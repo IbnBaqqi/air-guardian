@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: air-guardian
+  datasource:
+    url: jdbc:postgresql://localhost:5432/airGuardian?createDatabaseIfNotExist=true
+    username: postgres
+    password: postgresdb
