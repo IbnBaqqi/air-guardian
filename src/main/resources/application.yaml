@@ -1,7 +1,13 @@
 spring:
   application:
     name: air-guardian
+  config:
+    import: optional:file:.env.yaml
   datasource:
     url: jdbc:postgresql://localhost:5432/airGuardian?createDatabaseIfNotExist=true
     username: postgres
     password: postgresdb
+  jpa:
+    show-sql: true
+drone:
+  base-uri: ${BASE_URI}
