@@ -1,19 +1,18 @@
 package com.salausmart.airguardian;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.time.OffsetDateTime;
 import java.util.UUID;
 
 @Data
-public class DronesDto {
-
-    @JsonProperty("id")
+@AllArgsConstructor
+public class DroneViolatedDto {
     private UUID droneId;
-    @JsonProperty("owner_id")
     private Integer ownerId;
     private Double x;
     private Double y;
     private Double z;
-
+    private OffsetDateTime timestamp;
 }

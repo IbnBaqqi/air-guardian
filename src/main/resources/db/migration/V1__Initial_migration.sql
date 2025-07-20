@@ -4,7 +4,7 @@ create table public.violations
         constraint violations_pk
             primary key,
     drone_id           uuid                      not null,
-    owner_id           uuid                      not null,
+    owner_id           integer                   not null,
     timestamp          timestamptz default now() not null,
     position_x         double precision          not null,
     position_y         double precision          not null,

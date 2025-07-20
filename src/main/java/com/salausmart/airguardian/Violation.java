@@ -1,7 +1,9 @@
 package com.salausmart.airguardian;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.OffsetDateTime;
@@ -10,6 +12,8 @@ import java.util.UUID;
 @Getter
 @Setter
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "violations")
 public class Violation {
     @Id
@@ -21,7 +25,7 @@ public class Violation {
     private UUID droneId;
 
     @Column(name = "owner_id")
-    private UUID ownerId;
+    private Integer ownerId;
 
     @Column(name = "timestamp")
     private OffsetDateTime timestamp;
