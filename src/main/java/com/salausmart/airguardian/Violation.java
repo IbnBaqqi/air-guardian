@@ -24,9 +24,6 @@ public class Violation {
     @Column(name = "drone_id")
     private UUID droneId;
 
-    @Column(name = "owner_id")
-    private Integer ownerId;
-
     @Column(name = "timestamp")
     private OffsetDateTime timestamp;
 

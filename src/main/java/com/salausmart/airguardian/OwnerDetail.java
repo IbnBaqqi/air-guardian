@@ -7,13 +7,21 @@ import lombok.Data;
 public class OwnerDetail {
 
     private Integer id;
-    private String firstName; //yes
-    private String lastName; //yes
+
+    @JsonProperty("first_name")
+    private String firstName;
+
+    @JsonProperty("last_name")
+    private String lastName;
+
     private String email;
+
     @JsonProperty("phone_number")
-    private String phoneNumber; //yes
+    private String phoneNumber;
+
     @JsonProperty("social_security_number")
-    private String socialSecurityNumber; //yes
+    private String socialSecurityNumber;
+
     @JsonProperty("purchased_at")
     private String purchasedAt;
 
