@@ -14,6 +14,7 @@ import java.util.Map;
 @RequestMapping("/api")
 public class ViolationController {
     private final DroneService droneService;
+    private final ViolationService violationService;
 
     //    All of your API endpoints must be defined using Pydantic models—both for request parameters and response schemas.
 //    This ensures that:
@@ -41,6 +42,8 @@ public class ViolationController {
 //        This endpoint returns all drone violations detected within the last 24 hours
 //        No query parameters are required. The endpoint will always return violations from the last 24 hours.
 //        • GET /nfz: Returns violations from the last 24 hours
-        return null;
+        List<Violation> violations;
+        violations = violationService.nfz();
+        return ResponseEntity.ok(violations);
     }
 }
