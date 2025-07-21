@@ -9,3 +9,4 @@ spring:
     show-sql: true
 drone:
   base-uri: ${BASE_URI}
+secret: ${SECRET}
